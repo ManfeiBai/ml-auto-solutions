@@ -17,13 +17,13 @@ SCHEDULED_TIME = "0 6 * * *" if composer_env.is_prod_env() else None
 
 
 with models.DAG(
-    dag_id="solutionsteam_vllm_benchmark",
+    dag_id="torch_xla_vllm_regression",
     schedule=SCHEDULED_TIME,
     tags=["solutions_team", "nightly", "supported", "xlml"],
     start_date=datetime.datetime(2024, 1, 19),
     catchup=False,
 ) as dag:
-  test_name_prefix = "solutionsteam-vllm-benchmark"
+  test_name_prefix = "torch_xla_vllm_regression"
 
   # Generate a test run id in the format YYYYMMDD-HHmm to group
   # tests together.
