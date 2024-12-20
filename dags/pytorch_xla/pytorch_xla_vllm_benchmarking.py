@@ -8,7 +8,8 @@ from dags import composer_env
 from dags.common import test_owner
 from dags.common.vm_resource import AcceleratorType, GpuVersion, TpuVersion, Region, Zone, Project, V5_NETWORKS, V5E_SUBNETWORKS, V5P_SUBNETWORKS, BM_NETWORKS, A100_BM_SUBNETWORKS, ImageProject, ImageFamily, MachineVersion, RuntimeVersion
 from dags.multipod.configs.common import SetupMode, Platform
-from dags.solutions_team.configs.vllm import vllm_benchmark_config
+# from dags.solutions_team.configs.vllm import vllm_benchmark_config
+from dags.pytorch_xla.configs.vllm import vllm_benchmark_config
 
 
 # Run once a day at 6 am UTC (10 pm PST)
